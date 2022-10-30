@@ -7,8 +7,9 @@ const setupServer : Function = () => {
 
     const app: Express = express();
 
-    app.use(cors())
-    app.use('/helloworld', helloworldRoutes)
+    app.use(cors());
+    app.use(express.json());
+    app.use('/helloworld', helloworldRoutes);
 
     return app
 }
