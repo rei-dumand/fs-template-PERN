@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":";;;AAAA;IACI;AACJ,C","sources":["webpack://client/./src/index.css"],"sourcesContent":["body {\r\n    color: pink\r\n}"],"names":[],"sourceRoot":""}
