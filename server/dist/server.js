@@ -1,15 +1,11 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
-const helloworld_1 = __importDefault(require("./routes/helloworld"));
+import express from 'express';
+import cors from 'cors';
+import helloworldRoutes from './routes/helloworld';
 const setupServer = () => {
-    const app = (0, express_1.default)();
-    app.use((0, cors_1.default)());
-    app.use('/helloworld', helloworld_1.default);
+    const app = express();
+    app.use(cors());
+    app.use(express.json());
+    app.use('/helloworld', helloworldRoutes);
     return app;
 };
-exports.default = setupServer;
+export default setupServer;
